@@ -26,7 +26,6 @@ struct CoinRowView: View {
 
 #Preview {
     CoinRowView(coin: DeveloperPreview.shared.coin, showHoldingsColumn: true)
-        .previewLayout(.sizeThatFits)
 }
 
 extension CoinRowView {
