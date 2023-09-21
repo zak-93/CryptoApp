@@ -25,6 +25,7 @@
 		E0B6A6D62ABC559600B9F178 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6D52ABC559600B9F178 /* CoinImageView.swift */; };
 		E0B6A6D82ABC571800B9F178 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6D72ABC571800B9F178 /* CoinImageService.swift */; };
 		E0B6A6DA2ABC585C00B9F178 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6D92ABC585C00B9F178 /* CoinImageViewModel.swift */; };
+		E0B6A6DC2ABC622600B9F178 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6DB2ABC622600B9F178 /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		E0B6A6D52ABC559600B9F178 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		E0B6A6D72ABC571800B9F178 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 		E0B6A6D92ABC585C00B9F178 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
+		E0B6A6DB2ABC622600B9F178 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				E0B6A6D22ABC4ACB00B9F178 /* NetworkingManager.swift */,
+				E0B6A6DB2ABC622600B9F178 /* LocalFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				E0B6A6C72ABC31AC00B9F178 /* CoinRowView.swift in Sources */,
 				E0B6A6CD2ABC3E1900B9F178 /* HomeViewModel.swift in Sources */,
 				E0B6A6C52ABC2BF100B9F178 /* CoinsModel.swift in Sources */,
+				E0B6A6DC2ABC622600B9F178 /* LocalFileManager.swift in Sources */,
 				E0B6A6C02ABC24FE00B9F178 /* CircleButton.swift in Sources */,
 				E0B6A6D62ABC559600B9F178 /* CoinImageView.swift in Sources */,
 				E0B6A6A92ABC0B5900B9F178 /* ContentView.swift in Sources */,
