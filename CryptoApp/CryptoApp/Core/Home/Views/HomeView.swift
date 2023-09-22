@@ -18,7 +18,8 @@ struct HomeView: View {
                 .ignoresSafeArea()
             VStack {
                 homeHeader
-                Spacer(minLength: 0)
+                
+                SearchBarView(searchText: $viewModel.searchText)
                 
                 columnsTitles
                 
@@ -30,6 +31,8 @@ struct HomeView: View {
                     portfolioCoinsList
                         .transition(.move(edge: .trailing))
                 }
+                
+                Spacer(minLength: 0)
             }
         }
     }
