@@ -18,7 +18,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
             VStack {
                 homeHeader
-                
+                HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $viewModel.searchText)
                 
                 columnsTitles
