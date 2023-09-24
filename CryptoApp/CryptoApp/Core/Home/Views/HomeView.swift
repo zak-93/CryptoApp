@@ -31,10 +31,16 @@ struct HomeView: View {
                 if !showPortfolio {
                     allCoinsList
                         .transition(.move(edge: .leading))
+                        .refreshable {
+                            viewModel.reloadData()
+                        }
                 }
                 if showPortfolio {
                     portfolioCoinsList
                         .transition(.move(edge: .trailing))
+                        .refreshable {
+                            viewModel.reloadData()
+                        }
                 }
                 
                 Spacer(minLength: 0)
