@@ -22,20 +22,28 @@ struct DetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 20, content: {
-                Text("")
-                    .frame(height: 150)
-                overviewTitle
-                Divider()
-                overviewGrid
-                additaonalTitle
-                Divider()
-                additionalGrid
-            })
-            .padding()
-            
+            VStack {
+                ChartView(coin: viewModel.coin)
+                    .padding(.vertical)
+                
+                
+                VStack(spacing: 20, content: {
+                    overviewTitle
+                    Divider()
+                    overviewGrid
+                    additaonalTitle
+                    Divider()
+                    additionalGrid
+                })
+                .padding()
+            }
         }
         .navigationTitle(viewModel.coin.name)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                navigationBarTrailingItems
+            }
+        }
     }
 }
 
@@ -43,10 +51,20 @@ struct DetailView: View {
     NavigationStack {
         DetailView(coin: DeveloperPreview.shared.coin)
     }
-
 }
 
 extension DetailView {
+    
+    private var navigationBarTrailingItems: some View {
+        HStack {
+            Text(viewModel.coin.symbol.uppercased())
+                .font(.headline)
+                .foregroundStyle(Color.theme.secondaryText)
+            CoinImageView(coin: viewModel.coin)
+                .frame(width: 25, height: 25)
+        }
+    }
+    
     private var overviewTitle: some View {
         Text("Overview")
             .font(.title)
@@ -72,7 +90,6 @@ extension DetailView {
             ForEach(viewModel.overviewStatistics) { stat in
                 StatisticView(stat: stat)
             }
-           
         })
     }
     
@@ -84,7 +101,6 @@ extension DetailView {
                   content: {
             ForEach(viewModel.additionalStatistics) { stat in
                 StatisticView(stat: stat)                    }
-           
         })
     }
 }
