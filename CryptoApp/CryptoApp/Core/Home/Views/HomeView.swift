@@ -37,11 +37,19 @@ struct HomeView: View {
                         }
                 }
                 if showPortfolio {
-                    portfolioCoinsList
-                        .transition(.move(edge: .trailing))
-                        .refreshable {
-                            viewModel.reloadData()
+                    ZStack(alignment: .top) {
+                        if viewModel.portfolioCoins.isEmpty && viewModel.searchText.isEmpty {
+                            portfolioEmptyText
+                        } else {
+                            portfolioCoinsList
+                                .refreshable {
+                                    viewModel.reloadData()
+                                }
                         }
+                           
+                    }
+                    .transition(.move(edge: .trailing))
+
                 }
                 Spacer(minLength: 0)
             }
@@ -96,12 +104,17 @@ extension HomeView {
     private var allCoinsList: some View {
         List {
             ForEach(viewModel.allCoins) { coin in
-                NavigationLink {
-                    DetailView(coin: coin)
-                } label: {
-                    CoinRowView(coin: coin, showHoldingsColumn: false)
-                        .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
-                }
+                CoinRowView(coin: coin, showHoldingsColumn: false)
+                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .background(
+                        NavigationLink {
+                            DetailView(coin: coin)
+                        } label: {
+                 
+                        }
+                            .opacity(0)
+                    )
+               
             }
         }
         .listStyle(.plain)
@@ -115,6 +128,15 @@ extension HomeView {
             }
         }
         .listStyle(.plain)
+    }
+    
+    private var portfolioEmptyText: some View {
+        Text("You haven't added any coins to your portfolio yet. Click the + button to get started!")
+            .font(.callout)
+            .foregroundStyle(Color.theme.accent)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
     }
     
     private var columnsTitles: some View {
