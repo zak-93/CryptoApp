@@ -15,6 +15,10 @@
 		E05195232ABEC5340090E529 /* PortfolioConteiner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E05195212ABEC5340090E529 /* PortfolioConteiner.xcdatamodeld */; };
 		E05195252ABEC5C80090E529 /* PorfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05195242ABEC5C80090E529 /* PorfolioDataService.swift */; };
 		E05195272ABEDB8A0090E529 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05195262ABEDB8A0090E529 /* HapticManager.swift */; };
+		E051952C2AC076F20090E529 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E051952B2AC076F20090E529 /* DetailView.swift */; };
+		E051952E2AC083A60090E529 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E051952D2AC083A60090E529 /* DetailModel.swift */; };
+		E05195302AC086EB0090E529 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E051952F2AC086EB0090E529 /* DetailViewModel.swift */; };
+		E05195322AC087360090E529 /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05195312AC087360090E529 /* CoinDetailDataService.swift */; };
 		E0B6A6A72ABC0B5900B9F178 /* CryptoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6A62ABC0B5900B9F178 /* CryptoAppApp.swift */; };
 		E0B6A6A92ABC0B5900B9F178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6A82ABC0B5900B9F178 /* ContentView.swift */; };
 		E0B6A6AB2ABC0B5A00B9F178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B6A6AA2ABC0B5A00B9F178 /* Assets.xcassets */; };
@@ -50,6 +54,10 @@
 		E05195222ABEC5340090E529 /* PortfolioConteiner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioConteiner.xcdatamodel; sourceTree = "<group>"; };
 		E05195242ABEC5C80090E529 /* PorfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorfolioDataService.swift; sourceTree = "<group>"; };
 		E05195262ABEDB8A0090E529 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		E051952B2AC076F20090E529 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E051952D2AC083A60090E529 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		E051952F2AC086EB0090E529 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		E05195312AC087360090E529 /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 		E0B6A6A32ABC0B5900B9F178 /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B6A6A62ABC0B5900B9F178 /* CryptoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppApp.swift; sourceTree = "<group>"; };
 		E0B6A6A82ABC0B5900B9F178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +96,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E05195282AC0765C0090E529 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E051952A2AC076DD0090E529 /* ViewModels */,
+				E05195292AC076D50090E529 /* Views */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E05195292AC076D50090E529 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E051952B2AC076F20090E529 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E051952A2AC076DD0090E529 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E051952F2AC086EB0090E529 /* DetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E0B6A69A2ABC0B5900B9F178 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +177,7 @@
 			children = (
 				E0B6A6BD2ABC24D600B9F178 /* Components */,
 				E0B6A6B82ABC23D400B9F178 /* Home */,
+				E05195282AC0765C0090E529 /* Detail */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -204,6 +238,7 @@
 				E0B6A6E22ABD2DF300B9F178 /* StatisticModel.swift */,
 				E05195172ABD7EF30090E529 /* MarketDataModel.swift */,
 				E05195212ABEC5340090E529 /* PortfolioConteiner.xcdatamodeld */,
+				E051952D2AC083A60090E529 /* DetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +250,7 @@
 				E0B6A6D72ABC571800B9F178 /* CoinImageService.swift */,
 				E05195192ABD81A80090E529 /* MarketDataSevice.swift */,
 				E05195242ABEC5C80090E529 /* PorfolioDataService.swift */,
+				E05195312AC087360090E529 /* CoinDetailDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -325,7 +361,9 @@
 				E0B6A6A92ABC0B5900B9F178 /* ContentView.swift in Sources */,
 				E0B6A6E12ABC6DA700B9F178 /* UIApplication.swift in Sources */,
 				E0B6A6BC2ABC240600B9F178 /* HomeView.swift in Sources */,
+				E051952C2AC076F20090E529 /* DetailView.swift in Sources */,
 				E05195272ABEDB8A0090E529 /* HapticManager.swift in Sources */,
+				E051952E2AC083A60090E529 /* DetailModel.swift in Sources */,
 				E0B6A6A72ABC0B5900B9F178 /* CryptoAppApp.swift in Sources */,
 				E0B6A6DF2ABC698B00B9F178 /* SearchBarView.swift in Sources */,
 				E0B6A6D32ABC4ACB00B9F178 /* NetworkingManager.swift in Sources */,
@@ -338,6 +376,8 @@
 				E051951C2ABD892F0090E529 /* PortfolioView.swift in Sources */,
 				E0B6A6D82ABC571800B9F178 /* CoinImageService.swift in Sources */,
 				E051951A2ABD81A80090E529 /* MarketDataSevice.swift in Sources */,
+				E05195322AC087360090E529 /* CoinDetailDataService.swift in Sources */,
+				E05195302AC086EB0090E529 /* DetailViewModel.swift in Sources */,
 				E0B6A6C22ABC282A00B9F178 /* CircleButtonAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

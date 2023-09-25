@@ -90,8 +90,12 @@ extension HomeView {
     private var allCoinsList: some View {
         List {
             ForEach(viewModel.allCoins) { coin in
-                CoinRowView(coin: coin, showHoldingsColumn: false)
-                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                NavigationLink {
+                    DetailView(coin: coin)
+                } label: {
+                    CoinRowView(coin: coin, showHoldingsColumn: false)
+                        .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                }
             }
         }
         .listStyle(.plain)
@@ -124,7 +128,7 @@ extension HomeView {
             Spacer()
             if showPortfolio {
                 HStack(spacing: 4) {
-                Text("Holdings")
+                    Text("Holdings")
                     Image(systemName: "chevron.down")
                         .opacity((viewModel.sortOption == .holdings || viewModel.sortOption == .holdingsReversed) ?
                                  1.0 : 0.0)
