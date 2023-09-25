@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
     
     @StateObject var viewModel: DetailViewModel
+    @State private var showFullDescription = false
     private let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -25,15 +26,15 @@ struct DetailView: View {
             VStack {
                 ChartView(coin: viewModel.coin)
                     .padding(.vertical)
-                
-                
                 VStack(spacing: 20, content: {
                     overviewTitle
                     Divider()
+                    destinationSection
                     overviewGrid
                     additaonalTitle
                     Divider()
                     additionalGrid
+                    websiteSection
                 })
                 .padding()
             }
@@ -62,6 +63,31 @@ extension DetailView {
                 .foregroundStyle(Color.theme.secondaryText)
             CoinImageView(coin: viewModel.coin)
                 .frame(width: 25, height: 25)
+        }
+    }
+    
+    private var destinationSection: some View {
+        ZStack {
+            if let coinDestination = viewModel.coinDestination, !coinDestination.isEmpty {
+                VStack(alignment: .leading) {
+                    Text(coinDestination)
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .font(.callout)
+                        .foregroundStyle(Color.theme.secondaryText)
+                    Button(action: {
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                        }
+                    }, label: {
+                        Text(showFullDescription ? "Less" : "Read more..")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 4)
+                    })
+                    .foregroundStyle(.blue)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
     }
     
@@ -102,5 +128,25 @@ extension DetailView {
             ForEach(viewModel.additionalStatistics) { stat in
                 StatisticView(stat: stat)                    }
         })
+    }
+    
+    private var websiteSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            if let websiteString = viewModel.websiteURL,
+                let url = URL(string: websiteString) {
+                Link(destination: url) {
+                    Text("Website")
+                }
+            }
+            if let redditURL = viewModel.redditURL,
+               let url = URL(string: redditURL) {
+                Link(destination: url) {
+                    Text("Reddit")
+                }
+            }
+        }
+        .foregroundStyle(.blue)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .font(.headline)
     }
 }

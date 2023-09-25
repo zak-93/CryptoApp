@@ -13,6 +13,10 @@ struct DetailModel: Identifiable, Decodable {
     let hashingAlgorithm: String?
     let description: Description?
     let links: Links?
+    
+    var readableDestination: String? {
+        return description?.en?.removingHTMLOccurances
+    }
 }
 
 struct Description: Decodable {
