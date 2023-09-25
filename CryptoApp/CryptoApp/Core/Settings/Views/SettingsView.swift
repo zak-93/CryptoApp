@@ -16,11 +16,17 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                myGitSection
-                coinGeckoSection
+            ZStack {
+                Color.theme.background.ignoresSafeArea()
+                List {
+                    myGitSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    coinGeckoSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+
+                }
+                .listStyle(.grouped)
             }
-            .listStyle(.grouped)
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
