@@ -23,8 +23,9 @@
 		E05195362AC16D3E0090E529 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05195352AC16D3E0090E529 /* Date.swift */; };
 		E05195382AC194210090E529 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05195372AC194210090E529 /* String.swift */; };
 		E051953C2AC1989D0090E529 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E051953B2AC1989D0090E529 /* SettingsView.swift */; };
+		E05195402AC1A2BF0090E529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E051953F2AC1A2BF0090E529 /* LaunchScreen.storyboard */; };
+		E05195422AC1A4BD0090E529 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05195412AC1A4BD0090E529 /* LaunchView.swift */; };
 		E0B6A6A72ABC0B5900B9F178 /* CryptoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6A62ABC0B5900B9F178 /* CryptoAppApp.swift */; };
-		E0B6A6A92ABC0B5900B9F178 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6A82ABC0B5900B9F178 /* ContentView.swift */; };
 		E0B6A6AB2ABC0B5A00B9F178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B6A6AA2ABC0B5A00B9F178 /* Assets.xcassets */; };
 		E0B6A6AE2ABC0B5A00B9F178 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B6A6AD2ABC0B5A00B9F178 /* Preview Assets.xcassets */; };
 		E0B6A6B62ABC211200B9F178 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B6A6B52ABC211200B9F178 /* Color.swift */; };
@@ -66,9 +67,10 @@
 		E05195352AC16D3E0090E529 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E05195372AC194210090E529 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E051953B2AC1989D0090E529 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E051953F2AC1A2BF0090E529 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E05195412AC1A4BD0090E529 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		E0B6A6A32ABC0B5900B9F178 /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B6A6A62ABC0B5900B9F178 /* CryptoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppApp.swift; sourceTree = "<group>"; };
-		E0B6A6A82ABC0B5900B9F178 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E0B6A6AA2ABC0B5A00B9F178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B6A6AD2ABC0B5A00B9F178 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E0B6A6B52ABC211200B9F178 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -146,6 +148,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E051953D2AC1A2A30090E529 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				E051953E2AC1A2B40090E529 /* Views */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		E051953E2AC1A2B40090E529 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E051953F2AC1A2BF0090E529 /* LaunchScreen.storyboard */,
+				E05195412AC1A4BD0090E529 /* LaunchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E0B6A69A2ABC0B5900B9F178 = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +190,6 @@
 				E0B6A6B42ABC20E800B9F178 /* Extensions */,
 				E0B6A6C32ABC2BD800B9F178 /* Models */,
 				E0B6A6B72ABC23C300B9F178 /* Core */,
-				E0B6A6A82ABC0B5900B9F178 /* ContentView.swift */,
 				E0B6A6AA2ABC0B5A00B9F178 /* Assets.xcassets */,
 				E0B6A6AC2ABC0B5A00B9F178 /* Preview Content */,
 			);
@@ -202,6 +220,7 @@
 		E0B6A6B72ABC23C300B9F178 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E051953D2AC1A2A30090E529 /* Launch */,
 				E0B6A6BD2ABC24D600B9F178 /* Components */,
 				E0B6A6B82ABC23D400B9F178 /* Home */,
 				E05195282AC0765C0090E529 /* Detail */,
@@ -361,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05195402AC1A2BF0090E529 /* LaunchScreen.storyboard in Resources */,
 				E0B6A6AE2ABC0B5A00B9F178 /* Preview Assets.xcassets in Resources */,
 				E0B6A6AB2ABC0B5A00B9F178 /* Assets.xcassets in Resources */,
 			);
@@ -380,6 +400,7 @@
 				E0B6A6C72ABC31AC00B9F178 /* CoinRowView.swift in Sources */,
 				E051951E2ABD8B430090E529 /* XMarkButton.swift in Sources */,
 				E05195252ABEC5C80090E529 /* PorfolioDataService.swift in Sources */,
+				E05195422AC1A4BD0090E529 /* LaunchView.swift in Sources */,
 				E05195362AC16D3E0090E529 /* Date.swift in Sources */,
 				E0B6A6CD2ABC3E1900B9F178 /* HomeViewModel.swift in Sources */,
 				E0B6A6C52ABC2BF100B9F178 /* CoinsModel.swift in Sources */,
@@ -388,7 +409,6 @@
 				E0B6A6C02ABC24FE00B9F178 /* CircleButton.swift in Sources */,
 				E0B6A6E52ABD2F0D00B9F178 /* StatisticView.swift in Sources */,
 				E0B6A6D62ABC559600B9F178 /* CoinImageView.swift in Sources */,
-				E0B6A6A92ABC0B5900B9F178 /* ContentView.swift in Sources */,
 				E0B6A6E12ABC6DA700B9F178 /* UIApplication.swift in Sources */,
 				E0B6A6BC2ABC240600B9F178 /* HomeView.swift in Sources */,
 				E051952C2AC076F20090E529 /* DetailView.swift in Sources */,
@@ -551,6 +571,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -584,6 +605,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
